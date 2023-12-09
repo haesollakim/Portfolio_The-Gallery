@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+/* Header 영역
+        (PC버전 + 모바일 버전 반응형을 모두 포함하는 상단 바) */
+header {
+    position: relative;
+    width: 100%;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 0.75% 0;
+}
+
+/* Global Navigation Bar */
+.gnb {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: center;
+    width: 100%;
+    z-index: 10000;
+
+    i {
+        display: none;
+    }
+}
+
+/* 메뉴 그룹*/
+.menuGroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0 10%;
+}
+
+/* 메뉴 타이틀 */
+.menuTitle {
+    color: var(--color-white);
+    font-size: 2.5rem;
+    font-weight: 900;
+    padding: 10px;
+
+    &:hover {
+        border-radius: 25px;
+        background-color: var(--color-darkgray);
+        text-decoration: none;
+    }
+}
+
+/* 서브메뉴 */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 50px;
+    z-index: 10000;
+
+    li {
+        line-height: 200%;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* 서브메뉴 배경 */
+.submenu_bg {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-black);
+    z-index: 9999;
+}
+
+/* 서브메뉴 접기 버튼 */
+#subHideBtn {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    border: none;
+    background-color: transparent;
+    color: var(--color-lightgray);
+    font-size: 2.5rem;
+
+    &:hover {
+        color: var(--color-white);
+        cursor: pointer;
+    }
+}
+
+/* 사업체 로고: gnb 중앙에 위치 */
+.logo_area {
+    img {
+        width: 30rem;
+        transition: 0.75s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}

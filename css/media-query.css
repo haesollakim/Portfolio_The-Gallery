@@ -1,0 +1,249 @@
+@charset "UTF-8";
+/* [기본 구간 PC버전] 최소 1025px 이상 ~
+    : 데스크톱·랩톱 / PC 대용으로 쓰이는 와이드 태블릿의 가로(Landscape) 버전 */
+/* 반응형 모바일 버전 메뉴 영역 */
+.responsive_menu {
+  display: none;
+}
+
+/* [1구간] 최소 769px 이상 ~ 최대 1024px 이하
+    : 일반적인 태블릿의 가로(Landscape) 버전 */
+@media screen and (max-width: 1024px) {
+  /* 브라우저 폰트 크기 조정 */
+  html {
+    font-size: 50%;
+  }
+  /* Header 영역 */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9000;
+  }
+  /* Global Navigation Bar */
+  .gnb {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .gnb i {
+    display: block;
+    font-size: 4rem;
+  }
+  .gnb i:hover {
+    cursor: pointer;
+  }
+  /* 햄버거 메뉴 아이콘 */
+  #menuShowBtn:hover {
+    animation: rotate360deg 1s ease 1;
+  }
+  /* PC버전 메뉴 그룹*/
+  .menuGroup {
+    display: none;
+  }
+  /* 반응형 모바일 버전 메뉴 영역 */
+  .responsive_menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    max-height: 100%;
+    height: 100%;
+    background-color: var(--color-black);
+    overflow: scroll;
+    transition: 1s;
+    z-index: 100000;
+  }
+  /* 반응형 메뉴 리스트 */
+  .r_menu_list {
+    margin-top: 50%;
+    margin-left: 10%;
+  }
+  /* 반응형 메뉴 그룹 */
+  .r_menuGroup {
+    position: relative;
+    margin: 15% 0;
+  }
+  /* 반응형 메뉴 타이틀 */
+  .r_menuTitle {
+    color: var(--color-white);
+    font-size: 4.5rem;
+    padding: 10px;
+  }
+  .r_menuTitle:hover {
+    border-radius: 25px;
+    background-color: var(--color-darkgray);
+    text-decoration: none;
+  }
+  /* 반응형 서브메뉴 */
+  .r_submenu {
+    display: none;
+    line-height: 200%;
+    font-size: 3rem;
+    padding: 2.5%;
+  }
+  /* 반응형 메뉴 닫기 아이콘 */
+  #menuHideBtn {
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    color: var(--color-white);
+    font-size: 5rem;
+    transition: transform 0.25s ease;
+  }
+  #menuHideBtn:hover {
+    animation: rotate360deg 1s ease 1;
+    cursor: pointer;
+  }
+  /* 메인 섹션: 타이틀 */
+  .title_wrapper {
+    margin: 40% 0 80% 0;
+  }
+  .title_wrapper p {
+    animation: none;
+  }
+  .title_wrapper p br {
+    display: block;
+  }
+  .title_wrapper h1 {
+    animation: none;
+  }
+  /* 메인 섹션: 게시판 */
+  .board {
+    padding: 10%;
+  }
+  /* 메인 섹션: 게시판 제목 */
+  .board_title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .board_title h3,
+  .board_title i {
+    margin: 10% 0;
+  }
+  .board_title i {
+    text-align: right;
+  }
+  /* 메인 섹션: 게시물 */
+  .post {
+    display: none;
+  }
+  /* 전시회 섹션 */
+  .exhibition_section h2 br {
+    display: block;
+  }
+  /* 전시회 섹션: Swiper Slide 슬라이드 */
+  .swiper-slide {
+    width: 55rem;
+    height: 80rem;
+  }
+  .swiper-slide img {
+    width: 55rem;
+    height: 80rem;
+  }
+  /* 전시회 섹션: 전시회 정보 */
+  .info_wrapper {
+    width: 55rem;
+    height: 80rem;
+  }
+  /* 배너 섹션: 배너 타이포그래피 */
+  [class^=banner_typo] {
+    font-size: 7rem;
+  }
+  /* Footer 1번 박스 */
+  .footer_box_01 {
+    line-height: 150%;
+  }
+  /* Footer 4번 박스 */
+  .footer_box_04 {
+    line-height: 200%;
+  }
+  .footer_box_04 br {
+    display: block;
+  }
+}
+/* [2구간] 최소 480px 이상 ~ 최대 768px 이하
+    : 태블릿 세로(Portrait) 버전 / 스마트폰 가로 버전 */
+@media screen and (max-width: 768px) {
+  /* 브라우저 폰트 크기 조정 */
+  html {
+    font-size: 40%;
+  }
+  /* 메인 섹션: 타이틀 래퍼 */
+  .title_wrapper {
+    margin: 100% 0 150% 0;
+  }
+  .title_wrapper h1 {
+    font-size: 12rem;
+  }
+  /* 메인 섹션: 게시판 래퍼 */
+  .board_wrapper {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+  }
+  /* 메인 섹션: 게시판 */
+  .board {
+    padding: 2.5% 5%;
+  }
+  .board:hover h3,
+  .board:hover i {
+    transform: scale(1.05);
+  }
+  /* 메인 섹션: 게시판 제목 */
+  .board_title h3,
+  .board_title i {
+    margin: 2.5% 0;
+  }
+  /* 전시회 섹션 */
+  .exhibition_section h2 {
+    font-size: 6rem;
+  }
+  /* 전시회 섹션: Swiper Slide 컨테이너 */
+  .swiper-container {
+    padding: 10% 0;
+  }
+  /* 배너 섹션: 배너 */
+  .banner {
+    height: 25vh;
+  }
+  /* 배너 섹션: 배너 타이포그래피 */
+  [class^=banner_typo] {
+    font-size: 5rem;
+  }
+  /* Footer 영역 */
+  footer {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  /* Footer 박스 */
+  [class^=footer_box] {
+    border: none;
+    border-top: 1px dashed var(--color-lightgray);
+    padding: 5% 12.5%;
+  }
+  /* Footer 1번 박스 */
+  .footer_box_01 {
+    grid-row: 1/2;
+  }
+  /* Footer 2번 박스 */
+  .footer_box_02 {
+    grid-row: 2/3;
+  }
+  /* Footer 3번 박스 */
+  .footer_box_03 {
+    grid-row: 3/4;
+  }
+  /* Footer 4번 박스 */
+  .footer_box_04 {
+    grid-row: 4/5;
+  }
+}
+/* [3구간] 최소 360px 이상 ~ 최대 479px 이하
+    : 스마트폰 세로 버전 */
+@media screen and (max-width: 479px) {
+  /* 브라우저 폰트 크기 조정 */
+  html {
+    font-size: 35%;
+  }
+}/*# sourceMappingURL=media-query.css.map */

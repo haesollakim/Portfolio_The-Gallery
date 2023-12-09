@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>:: 더 갤러리에 오신 것을 환영합니다. :: The Gallery of Modern Design and Contemporary Art ::</title>
+    <meta name="description" content="광교신도시에 위치한 더 갤러리에서는 현대 미술을 감상하고 작품을 구매할 수 있습니다.">
+
+    <!-- 소셜 미디어 링크 공유 관련: 오픈 그래프(Open Graph) -->
+    <meta property="og:url" content="http://www.haesollakim.dothome.co.kr/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="더 갤러리">
+    <meta property="og:description"
+        content=":: 더 갤러리에 오신 것을 환영합니다. :: The Gallery of Modern Design and Contemporary Art ::">
+    <meta property="og:image" content="http://haesollakim.dothome.co.kr/0001/thegallery/images/the-gallary-logo.png">
+
+    <!-- 소셜 미디어 링크 공유 관련: 트위터(현 엑스) 카드 -->
+    <meta name="twitter:title" content="더 갤러리">
+    <meta name="twitter:description" content="광교신도시에 위치한 더 갤러리에서는 현대 미술을 감상하고 작품을 구매할 수 있습니다.">
+    <meta name="twitter:image" content="http://haesollakim.dothome.co.kr/0001/thegallery/images/the-gallary-logo.png">
+
+    <!-- 검색 엔진 로봇 제어 -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Font Awesome(아이콘) -->
+    <script src="https://kit.fontawesome.com/8c99599599.js" crossorigin="anonymous"></script>
+    <!-- AOS(스크롤 애니메이션 라이브러리) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <!-- Swiper Slide -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+    <!-- 이하 Style sheet 파일 연결 -->
+    <link rel="stylesheet" href="./css/commom.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/media-query.css">
+</head>
+
+<body>
+
+    <!-- Header 영역
+        (PC버전 + 반응형 모바일 버전을 모두 포함하는 상단 바) -->
+    <header>
+
+        <!-- Global Navigation Bar -->
+        <nav class="gnb">
+
+            <!-- 홈 아이콘: 반응형 모바일 버전에서만 나타남 -->
+            <i class="fa-solid fa-house" id="goHomeBtn"></i>
+
+            <!-- 이하 메뉴그룹은 PC버전에서만 나타남 -->
+
+            <!-- 1번 메뉴 -->
+            <div class="menuGroup">
+                <a href="#" class="menuTitle">Visit</a>
+                <ul class="submenu">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">관람 안내</a></li>
+                    <li><a href="#">가이드 대여</a></li>
+                    <li><a href="#">오시는 길</a></li>
+                </ul>
+            </div>
+
+            <!-- 2번 메뉴 -->
+            <div class="menuGroup">
+                <a href="#" class="menuTitle">Now&nbsp;on</a>
+                <ul class="submenu">
+                    <li><a href="#">전시 일정</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">프로그램</a></li>
+                </ul>
+            </div>
+
+            <!-- 사업체 로고: gnb 중앙에 위치 -->
+            <div class="logo_area">
+                <a href="#">
+                    <img src="./images/the-gallary-logo.png" alt="더 갤러리 영문 로고 이미지">
+                </a>
+            </div>
+
+            <!-- 3번 메뉴 -->
+            <div class="menuGroup">
+                <a href="#" class="menuTitle">Curators</a>
+                <ul class="submenu">
+                    <li><a href="#">도슨트 소개</a></li>
+                    <li><a href="#">교육</a></li>
+                    <li><a href="#">멤버십</a></li>
+                </ul>
+            </div>
+
+            <!-- 4번 메뉴 -->
+            <div class="menuGroup">
+                <a href="#" class="menuTitle">Store</a>
+                <ul class="submenu">
+                    <li><a href="#">작품</a></li>
+                    <li><a href="#">소품</a></li>
+                    <li><a href="#">시그니처 굿즈</a></li>
+                    <li><a href="#">아트 북</a></li>
+                </ul>
+            </div>
+
+            <!-- 햄버거 메뉴 아이콘: 반응형 모바일 버전에서만 나타남 -->
+            <i class="fa-solid fa-bars" id="menuShowBtn"></i>
+        </nav>
+
+        <!-- PC버전 서브메뉴 배경 & 접기 버튼 -->
+        <div class="submenu_bg">
+            <button id="subHideBtn">
+                <i class="fa-solid fa-angles-up"></i>
+            </button>
+        </div>
+    </header>
+
+
+    <!-- 콘텐츠(Content) 영역 시작 -->
+    <div class="content">
+
+        <!-- 메인 섹션 -->
+        <section class="main_section">
+
+            <!-- 내부 요소 배치 컨테이너 열림 -->
+            <div class="main_container">
+
+                <!-- 타이틀 -->
+                <div class="title_wrapper">
+                    <p data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                        The Gallery of <br>Modern Design and Contemporary Art
+                    </p>
+                    <h1 data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                        더 갤러리
+                    </h1>
+                </div>
+
+
+                <!-- 게시판 -->
+                <div class="board_wrapper">
+
+                    <!-- 1번 게시판: 좌측 -->
+                    <article class="board" data-aos="fade-down" data-aos-duration="500" data-aos-delay="100">
+                        <div class="board_title">
+                            <h3><a href="#">관람·참여</a></h3>
+                            <i class="fa-solid fa-ellipsis boardMoreBtn"><a href="#"></a></i>
+                        </div>
+                        <ul class="post">
+                            <li><a href="#">로렘 입숨 미술관 컬렉션 〈달라스와 20세기 거장들〉</a></li>
+                            <li><a href="#">아메트 특별전 : Amet and the Bible</a></li>
+                            <li><a href="#">LIGHT OF SHADOW : 그림자, 빛을 그리다 by Eveniet Fugit</a></li>
+                            <li><a href="#">어린이 미술캠프 참여 관련 안내사항</a></li>
+                        </ul>
+                    </article>
+
+                    <!-- 2번 게시판: 중앙 -->
+                    <article class="board" data-aos="fade-down" data-aos-duration="500" data-aos-delay="200">
+                        <div class="board_title">
+                            <h3><a href="#">디지털 미술관</a></h3>
+                            <i class="fa-solid fa-ellipsis boardMoreBtn"><a href="#"></a></i>
+                        </div>
+                        <ul class="post">
+                            <li><a href="#">큐레이터와 함께하는, 색이 머무는 자리</a></li>
+                            <li><a href="#">Neque Voluptate: COLOR IN TIME</a></li>
+                            <li><a href="#">제인 스미스 탄생 100주년 기념 〈스미스 특별전 : 무대와 프레임〉</a></li>
+                            <li><a href="#">존 베이커 : 바람, 바다, 별</a></li>
+                        </ul>
+                    </article>
+
+                    <!-- 3번 게시판: 우측 -->
+                    <article class="board" data-aos="fade-down" data-aos-duration="500" data-aos-delay="300">
+                        <div class="board_title">
+                            <h3><a href="#">시설 소개</a></h3>
+                            <i class="fa-solid fa-ellipsis boardMoreBtn"><a href="#"></a></i>
+                        </div>
+                        <ul class="post">
+                            <li><a href="#">공유 작업공간 [오픈 컬쳐 플레이스]</a></li>
+                            <li><a href="#">에듀 & 키즈: 어린이를 위한 미술교실</a></li>
+                            <li><a href="#">카페 더 갤러리</a></li>
+                            <li><a href="#">B1 모던 가든</a></li>
+                        </ul>
+                    </article>
+                </div>
+
+            </div>
+            <!-- 이상 내부 요소 배치 컨테이너 닫힘 -->
+
+        </section>
+
+
+        <!-- 전시회 섹션 -->
+        <section class="exhibition_section">
+
+            <h2 data-aos="fade-right" data-aos-duration="1000">
+                · OUR <br>EXHIBITIONS
+            </h2>
+
+            <!-- Swiper Slide 시작 -->
+            <div class="swiper-container" data-aos="zoom-in">
+
+                <div class="swiper-wrapper">
+
+                    <!-- 1번 슬라이드 -->
+                    <div class="swiper-slide slide01">
+                        <img src="./images/exhibition-poster/jiwon-kim-one-and-only-point-of-view.jpg"
+                            alt="김지원 작가의 전시회 원 앤 온리 포인트 오브 뷰 포스터">
+                        <dl class="info_wrapper">
+                            <dt>ONE & ONLY<br>Point of View</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        <h4>김지원</h4>
+                                    </li>
+                                    <li>2023.10.04 - 2023.12.02</li>
+                                    <li>1층 상설 전시마당</li>
+                                </ul>
+                                <button class="infoMoreBtn">자세히 보기</button>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <!-- 2번 슬라이드 -->
+                    <div class="swiper-slide slide02">
+                        <img src="./images/exhibition-poster/jin-young-yoon-tales-series-wendy-with-pieces.jpg"
+                            alt="윤진영 작가의 전시회 테일즈 시리즈 중 웬디와 조각들 포스터">
+                        <dl class="info_wrapper">
+                            <dt>[Tales series]<br>웬디와 조각들</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        <h4>윤진영</h4>
+                                    </li>
+                                    <li>2023.10.21 - 2023.12.27</li>
+                                    <li>1층 윈터홀</li>
+                                </ul>
+                                <button class="infoMoreBtn">자세히 보기</button>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <!-- 3번 슬라이드 -->
+                    <div class="swiper-slide slide03">
+                        <img src="./images/exhibition-poster/blake-veniam-the-mirror-city.jpg"
+                            alt="블레이크 베니엄 작가의 전시회 거울 도시 포스터">
+                        <dl class="info_wrapper">
+                            <dt>「거울 도시」<br>by<br>블레이크 베니엄</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        <h4>Blake Veniam</h4>
+                                    </li>
+                                    <li>2023.11.01 - 2024.1.11</li>
+                                    <li>2층 제1 전시장</li>
+                                </ul>
+                                <button class="infoMoreBtn">자세히 보기</button>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <!-- 4번 슬라이드 -->
+                    <div class="swiper-slide slide04">
+                        <img src="./images/exhibition-poster/soobin-park-the-second-meeting.jpg"
+                            alt="박수빈 작가의 사진전 두번째 만남 포스터">
+                        <dl class="info_wrapper">
+                            <dt>박수빈 사진展:<br>두번째 만남</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        <h4>박수빈</h4>
+                                    </li>
+                                    <li>2023.11.18 - 2024.1.26</li>
+                                    <li>2층 제2 전시장</li>
+                                </ul>
+                                <button class="infoMoreBtn">자세히 보기</button>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <!-- 5번 슬라이드 -->
+                    <div class="swiper-slide slide05">
+                        <img src="./images/exhibition-poster/soo-hyun-choi-holograms-within-us.jpg"
+                            alt="샘 초이 한국명 최수현 작가의 전시회 우리 안의 홀로그램 포스터">
+                        <dl class="info_wrapper">
+                            <dt>「우리 안의<br>홀로그램」</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        <h4>Sam Choi<br>a.k.a 최수현</h4>
+                                    </li>
+                                    <li>2023.12.01 - 2024.2.12</li>
+                                    <li>3층 미디어 아트 센터</li>
+                                </ul>
+                                <button class="infoMoreBtn">자세히 보기</button>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <!-- 6번 슬라이드 -->
+                    <div class="swiper-slide slide06">
+                        <img src="./images/exhibition-poster/billy-ferendiz-facing-horror.jpg"
+                            alt="빌리 페렌디스 작가의 전시회 호러 마주보기 포스터">
+                        <dl class="info_wrapper">
+                            <dt>빌리 페렌디스<br>개인展:<br>호러 마주보기</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        <h4>Billy Ferendiz</h4>
+                                    </li>
+                                    <li>2023.12.19 - 2024.2.29</li>
+                                    <li>4층 특별관</li>
+                                </ul>
+                                <button class="infoMoreBtn">자세히 보기</button>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <!-- 페이지네이션 -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- 이상 Swiper Slide 끝 -->
+
+            <h2 data-aos="fade-left" data-aos-duration="500">
+                SNOITIBIHXE <br>RUO ·
+            </h2>
+
+        </section>
+
+
+        <!-- 배너 섹션 -->
+        <section class="banner_section">
+
+            <ul class="banner_list">
+
+                <!-- 1번 배너 -->
+                <li class="banner" data-aos="flip-left">
+                    <h5 class="banner_typo_01" data-color="#F9F871">tHe<br>gArdeN</h5>
+                    <div class="banner_img_01" role="img" aria-label="지하 1층 모던 가든 조경 사진"></div>
+                </li>
+
+                <!-- 2번 배너 -->
+                <li class="banner" data-aos="flip-left">
+                    <div class="banner_img_02" role="img" aria-label="시그니처 조각 작품 진열 사진"></div>
+                    <h5 class="banner_typo_02" data-color="#FF7B87">siGNa<br>-tUreS</h5>
+                </li>
+
+                <!-- 3번 배너 -->
+                <li class="banner" data-aos="flip-left">
+                    <h5 class="banner_typo_03" data-color="#F862A7">foR<br>kiDs</h5>
+                    <div class="banner_img_03" role="img" aria-label="어린이 미술교실 참고 사진"></div>
+                </li>
+
+                <!-- 4번 배너 -->
+                <li class="banner" data-aos="flip-left">
+                    <div class="banner_img_04" role="img" aria-label="공동 작업 관련 연출 사진"></div>
+                    <h5 class="banner_typo_04" data-color="#BE5EC2">wOrk<br>pLaCe</h5>
+                </li>
+            </ul>
+
+            <!-- 배너 이미지 팝업: PC버전에서만 동작 -->
+            <div id="popup_banner_img"></div>
+        </section>
+
+    </div>
+    <!-- 이상 콘텐츠(Content) 영역 끝 -->
+
+
+    <!-- 반응형 모바일 버전 메뉴 영역 -->
+    <nav class="responsive_menu">
+
+        <!-- 닫기 아이콘 -->
+        <i class="fa-solid fa-xmark" id="menuHideBtn"></i>
+
+        <ul class="r_menu_list">
+            <!-- 1번 메뉴 -->
+            <li class="r_menuGroup">
+                <a href="#" class="r_menuTitle">Visit</a>
+                <ul class="r_submenu">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">관람 안내</a></li>
+                    <li><a href="#">가이드 대여</a></li>
+                    <li><a href="#">오시는 길</a></li>
+                </ul>
+            </li>
+
+            <!-- 2번 메뉴 -->
+            <li class="r_menuGroup">
+                <a href="#" class="r_menuTitle">Now on</a>
+                <ul class="r_submenu">
+                    <li><a href="#">전시 일정</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">프로그램</a></li>
+                </ul>
+            </li>
+
+            <!-- 3번 메뉴 -->
+            <li class="r_menuGroup">
+                <a href="#" class="r_menuTitle">Curators</a>
+                <ul class="r_submenu">
+                    <li><a href="#">도슨트 소개</a></li>
+                    <li><a href="#">교육</a></li>
+                    <li><a href="#">멤버십</a></li>
+                </ul>
+            </li>
+
+            <!-- 4번 메뉴 -->
+            <li class="r_menuGroup">
+                <a href="#" class="r_menuTitle">Store</a>
+                <ul class="r_submenu">
+                    <li><a href="#">작품</a></li>
+                    <li><a href="#">소품</a></li>
+                    <li><a href="#">시그니처 굿즈</a></li>
+                    <li><a href="#">아트 북</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- 오버레이: 영역 바깥의 화면을 클릭해서 요소 닫기 -->
+    <div class="overlay"></div>
+
+
+    <!-- Footer 영역 -->
+    <footer>
+
+        <!-- 1번 박스: 좌측 -->
+        <div class="footer_box_01">
+            경기도 수원시 영통구 이의동 123
+            <br>
+            광교 더 갤러리
+            <br>
+            <br>
+            대표이사 김수원
+        </div>
+
+        <!-- 2번 박스: 중앙 -->
+        <div class="footer_box_02">
+            <img src="./images/the-gallary-logo.png" alt="더 갤러리 영문 로고">
+            <ul class="sns_list">
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
+
+        <!-- 3번 박스: 우측 -->
+        <div class="footer_box_03">
+            <ul>
+                <li><a href="#" download>이용약관</a></li>
+                <li><a href="#" download>개인정보취급방침</a></li>
+                <li><a href="#" download>정보공개청구</a></li>
+                <li><a href="#" download>경영공시</a></li>
+            </ul>
+        </div>
+
+        <!-- 4번 박스: 하단 -->
+        <div class="footer_box_04">
+            COPYRIGHT © THE GALLERY. <br>ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+
+
+    <!-- 이하 외부 Script 파일 로드 -->
+
+    <!-- jQuery -->
+    <script src="./library/code.jquery.com_jquery-3.7.0.js"></script>
+    <!-- AOS(스크롤 애니메이션 라이브러리) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Swiper Slide -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Script 파일 연결 -->
+    <script src="./js/initialize.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/swiper-slide.js"></script>
+    <script src="./js/responsive.js"></script>
+
+</body>
+
+</html>

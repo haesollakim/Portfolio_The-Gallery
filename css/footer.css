@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/* Footer 영역 */
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 80% 1fr;
+  width: 100%;
+  color: var(--color-white);
+  font-size: 1.75rem;
+  margin-top: 10%;
+}
+
+/* Footer 박스 */
+[class^=footer_box] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 12.5%;
+}
+
+/* 1번 박스: 좌측 */
+.footer_box_01 {
+  border-top: 1px dashed var(--color-lightgray);
+  border-bottom: 1px dashed var(--color-lightgray);
+  line-height: 200%;
+}
+
+/* 2번 박스: 중앙 */
+.footer_box_02 {
+  border: 1px dashed var(--color-lightgray);
+}
+.footer_box_02 img {
+  width: 25rem;
+  border: 1px solid var(--color-white);
+  border-radius: 50%;
+  padding: 10px 20px;
+  margin: 0 auto;
+}
+
+/* 2번 박스: SNS 아이콘 리스트 */
+.sns_list {
+  display: flex;
+  justify-content: space-between;
+  font-size: 4rem;
+  margin-top: 7.5%;
+}
+.sns_list i {
+  color: var(--color-white);
+}
+.sns_list i:hover {
+  color: var(--color-lightgray);
+}
+
+/* 3번 박스: 우측 */
+.footer_box_03 {
+  border-top: 1px dashed var(--color-lightgray);
+  border-bottom: 1px dashed var(--color-lightgray);
+  line-height: 200%;
+  text-align: right;
+}
+
+/* 4번 박스: 하단 */
+.footer_box_04 {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  height: 15vh;
+  letter-spacing: 1rem;
+  text-align: center;
+}
+.footer_box_04 br {
+  display: none;
+}/*# sourceMappingURL=footer.css.map */

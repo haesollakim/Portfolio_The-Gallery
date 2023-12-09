@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/* 색상 변수 */
+:root {
+  /* 기본 색상(무채색) */
+  --color-white: #ffffff; /* 기본 흰색 */
+  --color-white20: rgba(255, 255, 255, 0.2); /* 투명도 20% 흰색 */
+  --color-lightgray: #aaaaaa; /* 연한 회색 */
+  --color-darkgray: #2d2d2d; /* 진한 회색 */
+  --color-black: #000000; /* 기본 검은색 */
+  --color-black60: rgba(0, 0, 0, 0.6); /* 투명도 60% 검은색 */
+  /* 포인트 색상(유채색) */
+  --color-yellow: #f9f871; /* 노란색 */
+  --color-peach: #ff7b87; /* 복숭아색 */
+  --color-rosepink: #f862a7; /* 로즈 핑크색 */
+  --color-violet: #be5ec2; /* 보라색 */
+}
+
+/* 기본 글꼴 */
+@font-face {
+  font-family: "SUIT-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 포인트 글꼴 */
+@font-face {
+  font-family: "Tenada";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Tenada.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 전역 초기 세팅 */
+* {
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "SUIT-Regular";
+  padding: 0;
+  margin: 0;
+}
+
+/* 브라우저의 폰트 크기를 10px = 1rem으로 설정 */
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-black);
+}
+
+/* a 태그의 브라우저 기본 스타일 변경 */
+a {
+  display: inline-block;
+  color: var(--color-white);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* 애니메이션: 왼쪽에서 오른쪽으로 나타남 */
+@keyframes fromLeft {
+  0% {
+    opacity: 0;
+    margin-left: -40vw;
+  }
+}
+/* 애니메이션: 오른쪽에서 왼쪽으로 나타남 */
+@keyframes fromRight {
+  0% {
+    opacity: 0;
+    margin-left: 40vw;
+  }
+}
+/* 애니메이션: 360도 회전 */
+@keyframes rotate360deg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=commom.css.map */

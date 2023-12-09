@@ -1,0 +1,360 @@
+@charset "UTF-8";
+
+/* 콘텐츠(Content) 영역 */
+.content {
+    width: 90%;
+    background-color: var(--color-white);
+    margin: 0 auto;
+    z-index: 4000;
+}
+
+/* 메인 섹션 */
+.main_section {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/the-gallary-view.jpg);
+    background-size: cover;
+    background-position: 50% 70%;
+    background-attachment: fixed;
+}
+
+/* 메인 섹션: 내부 요소 배치 컨테이너 */
+.main_container {
+    display: grid;
+    grid-template-rows: 75% 1fr;
+    position: relative;
+    width: 100%;
+    background-color: var(--color-black60);
+    color: var(--color-white);
+}
+
+/* 메인 섹션: 타이틀 래퍼 */
+.title_wrapper {
+    width: 100%;
+    padding-left: 10%;
+    margin: 20% 0 40% 0;
+
+    p {
+        font-size: 3rem;
+        margin-bottom: 10%;
+        animation: fromLeft 4s;
+
+        &:hover {
+            transform: scale(0.95);
+            cursor: default;
+        }
+
+        br {
+            display: none;
+        }
+    }
+
+    h1 {
+        font-size: 15rem;
+        font-family: "Tenada";
+        animation: fromRight 4s;
+
+        &:hover {
+            transform: scale(0.95);
+            cursor: default;
+        }
+    }
+}
+
+/* 메인 섹션: 게시판 래퍼 */
+.board_wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+/* 메인 섹션: 게시판 */
+.board {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid var(--color-white);
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 7%;
+
+    &:hover {
+        background-color: var(--color-white20);
+
+        h3,
+        i {
+            transform: scale(1.1);
+        }
+    }
+}
+
+/* 메인 섹션: 게시판 제목 */
+.board_title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 3rem;
+    margin-bottom: 5%;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+/* 메인 섹션: 게시물 */
+.post {
+    li {
+        list-style: disc;
+        line-height: 250%;
+        font-size: 2rem;
+    }
+
+    a {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+/* 전시회 섹션 */
+.exhibition_section {
+    width: 100%;
+    overflow: hidden;
+    padding: 10% 0;
+
+    h2 {
+        font-size: 12rem;
+        font-family: "Tenada";
+        margin: 0 5%;
+
+        br {
+            display: none;
+        }
+    }
+
+    & > :nth-child(3) {
+        text-align: right;
+    }
+}
+
+/* 전시회 섹션: Swiper Slide 컨테이너 */
+.swiper-container {
+    width: 100%;
+    padding: 7% 0;
+    margin: 7% 0;
+}
+
+/* 전시회 섹션: Swiper Slide 슬라이드 */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 45rem;
+    height: 70rem;
+
+    img {
+        width: 45rem;
+        height: 70rem;
+        object-fit: fill;
+    }
+
+    &:hover .info_wrapper {
+        display: block;
+    }
+}
+
+/* 전시회 섹션: 전시회 정보 */
+.info_wrapper {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45rem;
+    height: 70rem;
+    background-color: var(--color-black60);
+    color: var(--color-white);
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 20%;
+
+    li {
+        line-height: 325%;
+    }
+
+    dt {
+        font-size: 4.5rem;
+        font-weight: bold;
+    }
+
+    h4 {
+        font-size: 4rem;
+    }
+}
+
+/* 전시회 섹션: 전시회 정보 자세히 보기 */
+.infoMoreBtn {
+    display: inline-block;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    border: 1px solid var(--color-white);
+    border-radius: 25px;
+    background-color: transparent;
+    color: var(--color-white);
+    font-size: 2rem;
+    padding: 2.5%;
+
+    &:hover {
+        background-color: var(--color-white20);
+        text-decoration: none;
+    }
+}
+
+/* 전시회 섹션: Swiper Slide 페이지네이션 */
+.swiper-pagination-bullet {
+    width: 4.5rem;
+    height: 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: var(--color-lightgray);
+    opacity: 1;
+}
+
+/* 전시회 섹션: Swiper Slide 페이지네이션 액티브 */
+.swiper-pagination-bullet-active {
+    width: 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: var(--color-black);
+    transition: width 0.5s;
+}
+
+/* 배너 섹션 */
+.banner_section {
+    width: 100%;
+}
+
+/* 배너 섹션: 배너 리스트 */
+.banner_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-black);
+    margin: 0 auto;
+}
+
+/* 배너 섹션: 배너 */
+.banner {
+    display: flex;
+    width: 100%;
+    height: 40vh;
+}
+
+/* 배너 섹션: 배너 타이포그래피 */
+[class^="banner_typo"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    color: var(--color-black);
+    font-size: 9rem;
+    font-weight: 900;
+    overflow: hidden;
+
+    &:hover {
+        cursor: default;
+    }
+}
+
+/* 배너 섹션: 배너 이미지 */
+[class^="banner_img"] {
+    width: 65%;
+    background-size: cover;
+    background-position: 50% 70%;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+/* 배너 섹션: 1번 배너 타이포그래피 */
+.banner_typo_01 {
+    background-color: var(--color-yellow);
+}
+
+/* 배너 섹션: 1번 배너 이미지 */
+.banner_img_01 {
+    background-image: url(../images/banner/the-garden-banner.jpg);
+    background-position: 50% 90%;
+}
+
+/* 배너 섹션: 2번 배너 타이포그래피 */
+.banner_typo_02 {
+    background-color: var(--color-peach);
+}
+
+/* 배너 섹션: 2번 배너 이미지 */
+.banner_img_02 {
+    background-image: url(../images/banner/signatures-banner.jpg);
+}
+
+/* 배너 섹션: 3번 배너 타이포그래피 */
+.banner_typo_03 {
+    background-color: var(--color-rosepink);
+}
+
+/* 배너 섹션: 3번 배너 이미지 */
+.banner_img_03 {
+    background-image: url(../images/banner/for-kids-banner.jpg);
+}
+
+/* 배너 섹션: 4번 배너 타이포그래피 */
+.banner_typo_04 {
+    background-color: var(--color-violet);
+}
+
+/* 배너 섹션: 4번 배너 이미지 */
+.banner_img_04 {
+    background-image: url(../images/banner/work-place-banner.jpg);
+}
+
+/* 배너 섹션: 베너 이미지 팝업(PC버전에서만 동작) */
+#popup_banner_img {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100rem;
+    height: 60rem;
+    background-position: center;
+    z-index: 6000;
+}
+
+/* 오버레이: 영역 바깥의 화면을 클릭해서 요소 닫기 */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 5000;
+}
