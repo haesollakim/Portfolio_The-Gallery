@@ -10,6 +10,7 @@ function scrollToTop() {
     );
 }
 
+
 /**
  * 함수: 반응형 메뉴를 열기
  */
@@ -17,6 +18,7 @@ function r_openMenu() {
     $(".responsive_menu").css("right", "0");
     $(".overlay").show();
 }
+
 
 /**
  * 힘수: 반응형 메뉴를 닫기
@@ -26,6 +28,7 @@ function r_closeMenu() {
     $(".overlay").hide();
 }
 
+
 /**
  * 함수: 반응형 서브메뉴 아코디언 동작
  */
@@ -34,10 +37,11 @@ function r_sub() {
     $(this).siblings(".r_submenu").stop().slideDown(500);
 }
 
+
+
 /**
  * 이하 이벤트 핸들러 등록
  */
-
 // 홈 버튼 클릭 시 페이지 상단으로 스크롤
 $("#goHomeBtn").on("click", scrollToTop);
 

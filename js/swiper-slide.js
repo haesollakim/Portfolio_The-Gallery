@@ -4,16 +4,19 @@
  */
 let swiper;
 
+
 /**
  * 변수에 현재 화면 너비를 저장
  * @type {number}
  */
 let windowWidth = $(window).width();
 
+
 /**
  * 초기 반응형 Swiper Slide 설정을 위해 함수 호출
  */
 responsiveSwiper();
+
 
 /**
  * 함수: Swiper Slide 초기화
@@ -52,6 +55,7 @@ function initSwiper(effect, direction, slidesPerView) {
     });
 }
 
+
 /**
  * 함수: 스크롤 위치에 따른 Swiper Slide 재생 동작
  */
@@ -69,6 +73,7 @@ function scrollSwiper() {
     }
 }
 
+
 /**
  * 함수: 화면 너비 변경에 따른 반응형 Swiper Slide
  */
@@ -76,6 +81,7 @@ function resizeSwiper() {
     windowWidth = $(window).width();
     responsiveSwiper();
 }
+
 
 /**
  * 함수: 반응형 Swiper Slide 설정
@@ -90,10 +96,11 @@ function responsiveSwiper() {
     }
 }
 
+
+
 /**
  * 이하 이벤트 핸들러 등록
  */
-
 // 스크롤 위치에 따른 Swiper Slide 재생 동작 함수를 등록
 $(window).scroll(scrollSwiper);
 

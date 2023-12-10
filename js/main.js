@@ -6,6 +6,7 @@ function postAddTitle() {
     $(this).attr("title", $(this).html());
 }
 
+
 /**
  * 함수: 배너 색상을 반전
  */
@@ -15,6 +16,7 @@ function reverseBannerColor() {
     $(this).css("color", $(this).attr("data-color"));
 }
 
+
 /**
  * 함수: 배너 색상을 리셋
  */
@@ -23,6 +25,7 @@ function resetBannerColor() {
     $(this).css("background-color", $(this).attr("data-color"));
     $(this).css("color", "#000000");
 }
+
 
 /**
  * 함수: PC 버전 배너 이미지 팝업을 열기
@@ -40,6 +43,7 @@ function openImagePopup() {
     }
 }
 
+
 /**
  * 함수: PC 버전 배너 이미지 팝업을 닫기
  */
@@ -51,10 +55,11 @@ function closeImagePopup() {
     }
 }
 
+
+
 /**
  * 이하 이벤트 핸들러 등록
  */
-
 // 게시판 post(게시물) 제목에 마우스 진입 시 title 속성 추가
 $(".post li a").on("mouseenter", postAddTitle);
 
