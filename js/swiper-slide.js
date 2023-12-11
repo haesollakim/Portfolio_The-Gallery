@@ -19,6 +19,24 @@ responsiveSwiper();
 
 
 /**
+ * 함수: 스크롤 위치에 따른 Swiper Slide 재생 동작
+ */
+function scrollSwiper() {
+    let scrollValue = $(window).scrollTop();
+
+    // 현재 스크롤 위치 확인
+    console.log(scrollValue);
+
+    // 현재 스크롤 위치가 1300 이상일 때 재생 시작
+    if (scrollValue >= 1300) {
+        swiper.autoplay.start();
+    } else {
+        swiper.autoplay.stop();
+    }
+}
+
+
+/**
  * 함수: Swiper Slide 초기화
  * @param {string} effect - 슬라이드 전환 효과
  * @param {string} direction - 슬라이드 이동 방향
@@ -55,23 +73,6 @@ function initSwiper(effect, direction, slidesPerView) {
     });
 }
 
-
-/**
- * 함수: 스크롤 위치에 따른 Swiper Slide 재생 동작
- */
-function scrollSwiper() {
-    let scrollValue = $(window).scrollTop();
-
-    // 현재 스크롤 위치 확인
-    console.log(scrollValue);
-
-    // 현재 스크롤 위치가 1300 이상일 때 재생 시작
-    if (scrollValue >= 1300) {
-        swiper.autoplay.start();
-    } else {
-        swiper.autoplay.stop();
-    }
-}
 
 
 /**
